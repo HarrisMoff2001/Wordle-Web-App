@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wordle Game</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="game-container">
+      <h1>Wordle</h1>
+      <p>Type to enter letters and press enter to guess</p>
+
+      <div class="board" id="board"></div>
+
+      <div class="word-length-selector">
+        <label for="word-length">Select Word Length (2-8):</label>
+        <input type="number" id="word-length" min="2" max="8" value="5" />
+        <button id="set-word-length">Set Word Length</button>
+      </div>
+    </div>
+
+    <div id="win-popup" class="popup">
+      <div class="popup-content">
+        <h2>You Win!</h2>
+        <p>The word was <span id="word-to-guess-win">...</span></p>
+        <button id="play-again">Play Again</button>
+      </div>
+    </div>
+
+    <div id="loss-popup" class="popup">
+      <div class="popup-content">
+        <h2>You Lose!</h2>
+        <p>The word was <span id="word-to-guess-loss">...</span></p>
+        <button id="play-again-button">Play Again</button>
+      </div>
+    </div>
+
+    <script src="js/index.js"></script>
+  </body>
+</html>
